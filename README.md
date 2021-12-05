@@ -1,2 +1,2 @@
 # activity-finder
-Website that shows activities to do using Bored API
+An application to find something to do using Bored API
