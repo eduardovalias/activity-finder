@@ -59,6 +59,18 @@
     outline: none;
   }
 
+  .activityUI{
+    position: absolute;
+    top: 20%;
+    right: 45%;
+  }
+
+  .loading{
+    position: absolute;
+    top: 40%;
+    right: 36%;
+  }
+
 </style>
 
 <div class="toolbar" role="banner">
@@ -79,12 +91,20 @@
     <input placeholder="Type here (optional)" #box1> <br><br>
     <p>Insert activity key:</p>
     <input placeholder="Type here (optional)" type="number" #box2> <br><br>
-    <button (click)="search(box1.value, box2.value)">Search activity</button>
-  
+    <button (click)="search(box1.value, box2.value)">Search activity</button>  
 </div>
 
-<div>
-  
+<div *ngIf="!showUI && allData != undefined" class="activityUI">
+  <h1>Activity:</h1> <h4>{{allData.activity}}</h4>
+  <h1>Type:</h1> <h4>{{allData.type}}</h4>
+  <h1>Participants:</h1> <h4>{{allData.participants}}</h4>
+  <h1>Price:</h1> <h4>{{allData.price}}</h4>
+  <h1>Link:</h1> <h4>"{{allData.link}}"</h4>
+  <h1>Key:</h1> <h4>{{allData.key}}</h4>
+</div>
+
+<div *ngIf="!showUI && allData == undefined" class="loading">
+  <h1>Getting server data, please wait...</h1>
 </div>
 
 <router-outlet></router-outlet>

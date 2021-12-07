@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Activity } from '../models/activity.model';
 
 @Component({
   selector: 'app-root',
@@ -17,22 +16,22 @@ export class AppComponent {
 
   displayVal = '';
 
-  allData: Activity[] = [];
+  allData: any;
 
   search(type: string, key:string){
     this.showUI = false;
 
     if(key != '') {
-      this.http.get<Activity[]>(`${ this.apiURL }activity?key=${ key }`)
-              .subscribe(data => console.log(data));
+      this.http.get(`${ this.apiURL }activity?key=${ key }`)
+              .subscribe(data => {console.log(data); this.allData = data;});
     } 
     else if(type != ''){
-      this.http.get<Activity[]>(`${ this.apiURL }activity?type=${ type }`)
-              .subscribe(data => console.log(data));
+      this.http.get(`${ this.apiURL }activity?type=${ type }`)
+              .subscribe(data => {console.log(data); this.allData = data;});
     } 
     else {
-      this.http.get<Activity[]>(`${ this.apiURL }activity/`)
-              .subscribe(data => console.log(data));
+      this.http.get(`${ this.apiURL }activity/`)
+              .subscribe(data => {console.log(data); this.allData = data;});
     }  
   }
 }
