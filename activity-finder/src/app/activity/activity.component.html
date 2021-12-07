@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity component</title>
+</head>
+<body>
+    <div *ngIf="showUI" class="search">
+        <h1>Activity Finder</h1>
+          <p>Insert activity type:</p> 
+          <input placeholder="Type here (optional)" #box1> <br><br>
+          <p>Insert activity key:</p>
+          <input placeholder="Type here (optional)" type="number" #box2> <br><br>
+          <button (click)="search(box1.value, box2.value)">Search activity</button>  
+      </div>
+      
+      <div *ngIf="!showUI && allData != undefined" class="activityUI">
+        <h1>Activity:</h1> <h4>{{allData.activity}}</h4>
+        <h1>Type:</h1> <h4>{{allData.type}}</h4>
+        <h1>Participants:</h1> <h4>{{allData.participants}}</h4>
+        <h1>Price:</h1> <h4>{{allData.price}}</h4>
+        <h1>Link:</h1> <h4>"{{allData.link}}"</h4>
+        <h1>Key:</h1> <h4>{{allData.key}}</h4>
+        <button>+</button>
+      </div>
+      
+      <div *ngIf="!showUI && allData == undefined" class="loading">
+        <h1>Getting server data, please wait...</h1>
+      </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+.search{
+    position: absolute;
+    top: 40%;
+    right: 45%;
+  }
+
+  .search button{
+    background-color: #232f3b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 2em;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .search button:hover{
+    background-color: #161e25;
+  }
+
+  .activityUI{
+    position: absolute;
+    top: 20%;
+    right: 45%;
+  }
+
+  .activityUI button{
+    background-color: #232f3b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    width: 200px;
+  }
+
+  .activityUI button:hover{
+    background-color: #161e25;
+  }
+
+  .loading{
+    position: absolute;
+    top: 40%;
+    right: 36%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
