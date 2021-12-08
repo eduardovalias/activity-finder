@@ -57,3 +57,9 @@
   p {
     margin: 0;
   }
+
+  .error{
+    position: absolute;
+    top: 40%;
+    right: 30%;
+  }

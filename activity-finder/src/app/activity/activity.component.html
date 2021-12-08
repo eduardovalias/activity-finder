@@ -16,14 +16,18 @@
           <button (click)="search(box1.value, box2.value)">Search activity</button>  
       </div>
       
-      <div *ngIf="!showUI && allData != undefined" class="activityUI">
+      <div *ngIf="!showUI && allData != undefined && allData.error == undefined" class="activityUI">
         <h1>Activity:</h1> <h4>{{allData.activity}}</h4>
         <h1>Type:</h1> <h4>{{allData.type}}</h4>
         <h1>Participants:</h1> <h4>{{allData.participants}}</h4>
         <h1>Price:</h1> <h4>{{allData.price}}</h4>
         <h1>Link:</h1> <h4>"{{allData.link}}"</h4>
         <h1>Key:</h1> <h4>{{allData.key}}</h4>
-        <button>+</button>
+        <button (click)="fav(allData.activity, allData.type, allData.key)">+</button>
+      </div>
+
+      <div *ngIf="!showUI && allData != undefined && allData.error != undefined">
+        <h1 class="error">{{allData.error}}</h1>
       </div>
       
       <div *ngIf="!showUI && allData == undefined" class="loading">

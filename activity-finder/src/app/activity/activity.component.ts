@@ -34,6 +34,10 @@ export class ActivityComponent implements OnInit {
     }  
   }
 
+  fav(activity: string, type: string, key: string){
+    
+  }
+
   ngOnInit(): void {
   }
 
