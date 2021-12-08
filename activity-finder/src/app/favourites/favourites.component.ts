@@ -9,7 +9,16 @@ export class FavouritesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  local = window.localStorage;
+  keys = Object.keys(localStorage);
+  x: any;
+
+  delete(i:number){
+    this.local.removeItem(this.keys[i]);
+    this.x = document.getElementById("btn" + i);
+    this.x.remove();
   }
 
+  ngOnInit(): void {
+  }
 }

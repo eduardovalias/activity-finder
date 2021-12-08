@@ -34,8 +34,9 @@ export class ActivityComponent implements OnInit {
     }  
   }
 
-  fav(activity: string, type: string, key: string){
-    
+  fav(activity: string, key: string){
+    window.localStorage.setItem(key, activity);
+    window.alert(`"${activity}" is added to your favorites!`);
   }
 
   ngOnInit(): void {

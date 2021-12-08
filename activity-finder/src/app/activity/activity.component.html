@@ -23,7 +23,7 @@
         <h1>Price:</h1> <h4>{{allData.price}}</h4>
         <h1>Link:</h1> <h4>"{{allData.link}}"</h4>
         <h1>Key:</h1> <h4>{{allData.key}}</h4>
-        <button (click)="fav(allData.activity, allData.type, allData.key)">+</button>
+        <button (click)="fav(allData.activity, allData.key)">+</button>
       </div>
 
       <div *ngIf="!showUI && allData != undefined && allData.error != undefined">
