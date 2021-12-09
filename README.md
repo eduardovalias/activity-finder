@@ -1,7 +1,7 @@
-#Activity-finder
+# Activity-finder
 
 
-##Objective:
+# # Objective:
 The idea of this application is use the Bored API to find activities to do when you are bored.<br />
 The activites that you are going to find are related to the following types:<br />
 • education<br />
