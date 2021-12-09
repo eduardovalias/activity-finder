@@ -11,7 +11,7 @@ export class ActivityComponent implements OnInit {
   constructor(private http : HttpClient){}
 
   showUI = true;
-  readonly apiURL = 'http://www.boredapi.com/api/';
+  readonly apiURL = 'https://www.boredapi.com/api/';
 
   displayVal = '';
 
