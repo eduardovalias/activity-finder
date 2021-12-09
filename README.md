@@ -19,9 +19,21 @@ Those types are also the ones that you use to search an activity to do.<br />
 You can save the activities that you like on the favourites page, and can also remove them later.<br />
 To access the favourite page, all you need to do is click on the "favourite" button, on the top of the page.
 
-# Installation
+## Installation and usage
+
+### By localhost:
 Clone the repository:
 ```
 git clone https://github.com/eduardovalias/activity-finder.git
-
 ```
+Install node modules:
+```
+npm i @angular/cli
+```
+Run project:
+```
+ng serve --open
+```
+
+### By GitHub pages:
+Just click on [this link](https://eduardovalias.github.io/activity-finder/)
