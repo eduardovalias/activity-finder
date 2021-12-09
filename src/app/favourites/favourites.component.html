@@ -9,7 +9,7 @@
 <body>
     <div class="fav">
         <h1>Favourites:</h1>
-        <p *ngFor="let key of keys, let i = index">{{ local.getItem(key) }} <button [attr.id]="'btn' + i" (click)="delete(i)">Remove</button></p>
+        <p class="txt" *ngFor="let key of keys, let i = index">{{ local.getItem(key) }} <button class="delete" [attr.id]="'btn' + i" (click)="delete(i)">-</button></p>
     </div>
 </body>
 </html>

@@ -3,3 +3,25 @@
     top: 15%;
     left: 30%;
 }
+
+.txt{
+    font-size: 25px;
+}
+
+.delete{
+    background-color: rgb(182, 9, 9);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 50px;
+}
+
+.delete:hover{
+    background-color: #6b0505;
+}
+
+h1{
+    font-size: 60px;
+}

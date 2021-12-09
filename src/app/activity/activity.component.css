@@ -1,8 +1,48 @@
 .search{
     position: absolute;
     top: 40%;
-    right: 45%;
-  }
+    right: 30%;
+    width: 600px;
+}
+
+.search h1{
+  position: absolute;
+  top: -230px;
+  font-size: 80px;
+}
+
+.p1{
+  position: absolute;
+  top: -60px;
+  font-size: 30px;
+}
+
+.i1{
+  position: absolute;
+  font-size: 15px;
+  outline: none;
+  border-radius: 6px;
+  top: 0px;
+  height: 35px;
+  background-color: lightgrey;
+  top: -15px;
+}
+
+.p2{
+  position: absolute;
+  top: +40px;
+  font-size: 30px;
+}
+
+.i2 {
+  position: absolute;
+  font-size: 15px;
+  outline: none;
+  border-radius: 6px;
+  top: +85px;
+  height: 35px;
+  background-color: lightgrey;
+}
 
   .search button{
     background-color: #232f3b;
@@ -13,6 +53,9 @@
     font-size: 2em;
     cursor: pointer;
     outline: none;
+    position: absolute;
+    top: +190px;
+    right: +205px;
   }
 
   .search button:hover{
@@ -22,7 +65,11 @@
   .activityUI{
     position: absolute;
     top: 20%;
-    right: 45%;
+    right: 37%;
+    background-color: #5F9EA0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 430px;
   }
 
   .activityUI button{
@@ -32,7 +79,8 @@
     border-radius: 10px;
     outline: none;
     cursor: pointer;
-    width: 200px;
+    font-size: 2.5em;
+    width: 60px;
   }
 
   .activityUI button:hover{
